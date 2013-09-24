@@ -8,8 +8,6 @@ var exports = module.exports = function (doc) {
         var splat = doc.cookie.split(/;\s*/);
         for (var i = 0; i < splat.length; i++) {
             var ps = splat[i].split('=');
-            var k = unescape(ps[0]);
-            if (k === key) return unescape(ps[1]);
         }
         return undefined;
     };
