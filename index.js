@@ -22,11 +22,18 @@ var exports = module.exports = function (doc) {
         doc.cookie = s;
         return s;
     };
+
+    self.delete = function (key) {
+      self.set(key, '', { expires: Date(0) });
+    };
+
     return self;
+
 };
 
 if (typeof document !== 'undefined') {
     var cookie = exports(document);
     exports.get = cookie.get;
     exports.set = cookie.set;
+    exports.delete = cookie.delete;
 }

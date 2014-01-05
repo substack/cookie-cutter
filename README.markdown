@@ -26,8 +26,8 @@ cookie(document)
 Return a new cookie object with `.get()` and `.set()` operating on `document`.
 
 `document.cookie` should be a non-referentially transparent setter/getter combo
-like the DOM's variant where assignment with optional path and expiry creates a
-new cookie in the getter as a key=value pair.
+like the DOM's variant where assignment with optional `path` and `expires`
+creates a new cookie in the getter as a key=value pair.
 
 cookie.get(key)
 ---------------
@@ -39,7 +39,10 @@ cookie.set(key, value, opts={})
 
 Set the cookie at `key` to `value` with optional parameters `expires` and `path`.
 
-To unset a cookie, use a date in the past, ex: ```{ expires: new Date(0) }```
+cookie.delete(key)
+-----------------
+
+Unsets the cookie at `key` by setting its `expires` to a date in the past.
 
 
 install
