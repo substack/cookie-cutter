@@ -37,7 +37,10 @@ Return the cookie value for `key`.
 cookie.set(key, value, opts={})
 -------------------------------
 
-Set the cookie at `key` to `value` with optional parameters `expiry` and `path`.
+Set the cookie at `key` to `value` with optional parameters `expires` and `path`.
+
+To unset a cookie, use a date in the past, ex: ```{ expires: new Date(0) }```
+
 
 install
 =======
