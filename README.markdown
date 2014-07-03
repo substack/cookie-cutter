@@ -39,7 +39,12 @@ cookie.set(key, value, opts={})
 
 Set the cookie at `key` to `value` with optional parameters `expires` and `path`.
 
-To unset a cookie, use a date in the past, ex: ```{ expires: new Date(0) }```
+To unset a cookie, use a date in the past, and set the value to an empty string. ex: 
+
+```
+var value = '';
+cookie.set('key', value, { expires: new Date(0) });
+```
 
 
 install
