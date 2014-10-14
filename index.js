@@ -7,9 +7,10 @@ var exports = module.exports = function (doc) {
     self.get = function (key) {
         var splat = doc.cookie.split(/;\s*/);
         for (var i = 0; i < splat.length; i++) {
-            var ps = splat[i].split('=');
-            var k = unescape(ps[0]);
-            if (k === key) return unescape(ps[1]);
+            var m = /(.*?)=(.*)/.exec(splat[i]);
+            if (!m) continue;
+            var k = unescape(m[1]);
+            if (k === key) return unescape(m[2]);
         }
         return undefined;
     };
