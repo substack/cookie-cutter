@@ -3,7 +3,7 @@ cookie-cutter
 
 Set and get cookies in the browser or in node with `document`.
 
-In your browser code with [browserify](github.com/substack/node-browserify):
+In your browser code with [browserify](http://github.com/substack/node-browserify):
 
 ````javascript
 var cookie = require('cookie-cutter');
