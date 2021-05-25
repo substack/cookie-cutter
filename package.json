@@ -17,5 +17,6 @@
     "name": "James Halliday",
     "email": "mail@substack.net",
     "url": "http://substack.net"
-  }
+  },
+  "types": "index.d.ts"
 }
